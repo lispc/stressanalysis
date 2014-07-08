@@ -53,10 +53,10 @@ def get_arff():
 	neg_f = '../../clean_data/neg.dat'
 	data = []
 	for l in open(pos_f):
-		data.append([True]+analyze(l.strip()))
+		data.append(analyze(l.strip())+[True])
 	for l in open(neg_f):
-		data.append([False]+analyze(l.strip()))
-	arff.dump('data.arff',data,relation='stress',names=['is_stress']+feature_name)
+		data.append(analyze(l.strip())+[False])
+	arff.dump('data.arff',data,relation='stress',names=feature_name+['is_stress'])
 
 sample_text = '身边有无数的圈子。大大小小。但…自己却无论哪个圈子都无法走进…因为怕。害怕会被讨厌。我知道自己的病却又无法拯救自己…。我…到底在渴求着什么。#消沉#强迫症#社交障碍#' 
 
