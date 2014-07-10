@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu Jul 10 10:47:46 CST 2014
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=/home/dmj/WeiboCrawler_fat.jar
+manifest.mergeall=true
+manifest.mainclass=Test.WeiboCrawler
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=
