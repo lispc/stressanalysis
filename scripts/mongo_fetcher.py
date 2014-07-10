@@ -12,9 +12,9 @@ class Alarm(Exception):
 def alarm_handler(signum, frame):
     raise Alarm
 signal.signal(signal.SIGALRM, alarm_handler)
-def get_weibo_by_uid(uid,limit=100,timeout=10,min_limit=10):#TODO min_limit
+def get_weibo_by_uid(uid,limit=100,timeout=10,min_limit=50):#TODO min_limit
 	if table.find({"user.id":uid}).count() >= min_limit:
-		return table.find({"user.id":uid}).limit(limit)
+		return list(table.find({"user.id":uid}).limit(limit))
 	devnull = open(os.devnull,"wb")
 	signal.alarm(timeout)
 	try:
@@ -24,12 +24,13 @@ def get_weibo_by_uid(uid,limit=100,timeout=10,min_limit=10):#TODO min_limit
 	except Alarm:
 		print "timeout"
 		pass
-	return table.find({"user.id":uid}).limit(limit)
+	#return [item for item in table.find({"user.id":uid}).limit(limit)]
+	return list(table.find({"user.id":uid}).limit(limit))
 if __name__ == "__main__":
 	uid = 2696095571
 	if len(sys.argv) == 2:
 		uid = int(sys.argv[1])
-	print list(get_weibo_by_uid(uid,2,100))
+	print get_weibo_by_uid(uid,2,100)
 '''
 ofile = open("all","w")
 for item in table.find():
