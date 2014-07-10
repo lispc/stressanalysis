@@ -1,2 +1,6 @@
 *.data
 *.pyc
+uid_correct.txt
+uids_exception.txt
+weibo.log
+weibo.log.1
