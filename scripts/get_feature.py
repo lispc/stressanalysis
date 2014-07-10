@@ -32,9 +32,9 @@ features,liwc = init_dict("../dict/TextMind.txt")
 feature_desc = dict(features)
 feature_name = [desc for i,desc in features]
 feature_id = [i for i,desc in features]
-def init_model(filename="liblinear.model"):
+def init_model(filename="model"):
 	return svm.load_model(filename)
-#model = init_model()
+model = init_model()
 def get_word_type_vec(text,verbose=False):
 	token_num = 0
 	if verbose:
@@ -59,16 +59,27 @@ def analyze(text):
 	return [1.0/total]+[vec[fid]/float(total) if fid in vec else 0 for fid in feature_id]
 pos_f = '../../clean_data/pos.dat'
 neg_f = '../../clean_data/neg.dat'
-def get_arff_and_svm():
+def read_test_data(with_text=False):
 	data = []
+	texts = []
 	for l in open(pos_f):
 		fvec = analyze(l.strip())
 		if fvec:
 			data.append(fvec+[True])
+			texts.append(l.strip())
 	for l in open(neg_f):
 		fvec = analyze(l.strip())
 		if fvec:
 			data.append(fvec+[False])
+			texts.append(l.strip())
+	if with_text:
+		return data,texts
+	else:
+		return data
+def trim_test_data(data):
+	return map(lambda x:x[-1],data),map(lambda x:x[:-1],data)
+def write_feature_file():
+	data = read_test_data()
 	arff.dump('data.arff',data,relation='stress',names=['token_num']+feature_name+['is_stress'])
 	svm_ofile = open("data.svm","w")
 	for ins in data:
@@ -78,11 +89,17 @@ def get_arff_and_svm():
 	svm_ofile.close()
 def prefict_from_text(text=sample_text):
 	res = svm.predict([],[analyze(text)],model)
-	print res
-	return res[2][0][0]/2+0.5
+	return res[2][0][0]
+def cal_roc():
+	total_data, text = read_test_data(True)
+	label, test_feature = trim_test_data(total_data)
+	result,_,prob = svm.predict(label,test_feature,model)
+	for i in range(len(label)):
+		print label[i],prob[i][0],text[i]
 if __name__ == "__main__":
-	get_arff_and_svm()
+	#write_feature_file()
 	#if len(sys.argv) == 2:
 	#	print prefict_from_text(sys.argv[1])
 	#else:
 	#	print prefict_from_text()
+	cal_roc()

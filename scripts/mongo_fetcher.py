@@ -1,12 +1,36 @@
 #! /usr/bin/python
 import pymongo
 import sys
-ip = "166.111.139.100"
+import subprocess
+import signal
+import os
+ip = "166.111.139.96"
 cli = pymongo.MongoClient(ip)
-table = cli.weibo_ajay.weibo_status_3_11_update
-cnt = 0
-limit = 1700000
-#ofile = sys.stdout
+table = cli.weibo_Test.weibo_status
+class Alarm(Exception):
+    pass
+def alarm_handler(signum, frame):
+    raise Alarm
+signal.signal(signal.SIGALRM, alarm_handler)
+def get_weibo_by_uid(uid,limit=100,timeout=10,min_limit=10):#TODO min_limit
+	if table.find({"user.id":uid}).count() >= min_limit:
+		return table.find({"user.id":uid}).limit(limit)
+	devnull = open(os.devnull,"wb")
+	signal.alarm(timeout)
+	try:
+		p = subprocess.Popen(['java', '-jar', '../WeiboCrawler/WeiboCrawler_fat.jar', str(uid)],stdout=devnull,stderr=devnull,shell=False)
+		p.wait()
+		signal.alarm(0)  # reset the alarm
+	except Alarm:
+		print "timeout"
+		pass
+	return table.find({"user.id":uid}).limit(limit)
+if __name__ == "__main__":
+	uid = 2696095571
+	if len(sys.argv) == 2:
+		uid = int(sys.argv[1])
+	print list(get_weibo_by_uid(uid,2,100))
+'''
 ofile = open("all","w")
 for item in table.find():
 	try:
@@ -21,4 +45,5 @@ for item in table.find():
 	except:
 		print >>sys.stderr,item
 ofile.close()
+'''
 
