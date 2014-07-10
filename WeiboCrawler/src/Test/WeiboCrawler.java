@@ -21,6 +21,7 @@ import weibo4j.Oauth;
 import weibo4j.Timeline;
 import weibo4j.Users;
 import weibo4j.examples.oauth2.Log;
+import weibo4j.http.AccessToken;
 import weibo4j.model.Paging;
 import weibo4j.model.Status;
 import weibo4j.model.StatusWapper;
@@ -54,6 +55,11 @@ public class WeiboCrawler {
 			mongoDB = mongo.getDB(weibodb_name);
 			userCollection = mongoDB.getCollection(user_collection);
 			statusCollection = mongoDB.getCollection(status_collection);
+			
+			//获取accessToken
+//			Oauth oauth = new Oauth();
+//			String oauthUrl = oauth.authorize("code", "");
+//			BareBonesBrowserLaunch.openURL(oauthUrl);
 			
 			um = new Users();
 			um.client.setToken(accessToken);
@@ -91,7 +97,7 @@ public class WeiboCrawler {
 			e.printStackTrace();
 		}
 	}
-	
+		
 	//public static void CrawUserByUids(String uidListFile, String logFile, String resultUidListFile)
 	public static void CrawUserByUids(String uid, String logFile, String resultUidListFile){
 //		try
@@ -233,45 +239,69 @@ public class WeiboCrawler {
 	
 	public static void CrawlStatusesByUid(final String uid, final int totalStatusNum)
 	{
-		Thread crawlThread = new Thread(){
-			public void run()
-			{
-				try {
-					int countPerPage = 100;
-					int totalPage = totalStatusNum / countPerPage;
-					if(totalStatusNum % countPerPage > 0) totalPage ++;
-					
-					for(int pageIndex = 1; pageIndex < totalPage; pageIndex ++)
-					{
-						Paging page = new Paging(pageIndex, countPerPage);
-						StatusWapper statusWapper = tm.getUserTimelineByUid(uid, page, 0, 0);
-						System.out.println("page index=" + pageIndex + "status num:" + statusWapper.getStatuses().size());
-						List<Status> statuses = statusWapper.getStatuses();
-						for(int i = 0; i < statuses.size(); i ++){
-							Status status = statuses.get(i);
-							DBObject object = (BasicDBObject)JSON.parse(status.originJSON.toString());
-							statusCollection.save(object);
-							System.out.println("pageIndex=" + pageIndex + ", statusIndex=" + i + ", status=" + status);
-							System.err.println(status);
-						}
-						System.out.println("total Num:" + statusWapper.getTotalNumber());
-					}
-				} catch (WeiboException e) {
-					e.printStackTrace();
-				}
-			}
-		};
-		crawlThread.start();
-		State threadState = crawlThread.getState();
-		while(java.lang.Thread.State.TERMINATED != crawlThread.getState())
+//		Thread crawlThread = new Thread(){
+//			public void run()
+//			{
+//				try {
+//					int countPerPage = 100;
+//					int totalPage = totalStatusNum / countPerPage;
+//					if(totalStatusNum % countPerPage > 0) totalPage ++;
+//					
+//					for(int pageIndex = 1; pageIndex < totalPage; pageIndex ++)
+//					{
+//						Paging page = new Paging(pageIndex, countPerPage);
+//						StatusWapper statusWapper = tm.getUserTimelineByUid(uid, page, 0, 0);
+//						System.out.println("page index=" + pageIndex + "status num:" + statusWapper.getStatuses().size());
+//						List<Status> statuses = statusWapper.getStatuses();
+//						for(int i = 0; i < statuses.size(); i ++){
+//							Status status = statuses.get(i);
+//							DBObject object = (BasicDBObject)JSON.parse(status.originJSON.toString());
+//							statusCollection.save(object);
+//							System.out.println("pageIndex=" + pageIndex + ", statusIndex=" + i + ", status=" + status);
+//							System.err.println(status);
+//						}
+//						System.out.println("total Num:" + statusWapper.getTotalNumber());
+//					}
+//				} catch (WeiboException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		};
+//		crawlThread.start();
+//		State threadState = crawlThread.getState();
+//		while(java.lang.Thread.State.TERMINATED != crawlThread.getState())
+//		{
+//			try {
+//				Thread.sleep(5000);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
+		
+		try {
+		int countPerPage = 100;
+		int totalPage = totalStatusNum / countPerPage;
+		if(totalStatusNum % countPerPage > 0) totalPage ++;
+		
+		for(int pageIndex = 1; pageIndex < totalPage; pageIndex ++)
 		{
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			Paging page = new Paging(pageIndex, countPerPage);
+			StatusWapper statusWapper = tm.getUserTimelineByUid(uid, page, 0, 0);
+			System.out.println("page index=" + pageIndex + "status num:" + statusWapper.getStatuses().size());
+			List<Status> statuses = statusWapper.getStatuses();
+			for(int i = 0; i < statuses.size(); i ++){
+				Status status = statuses.get(i);
+				DBObject object = (BasicDBObject)JSON.parse(status.originJSON.toString());
+				statusCollection.save(object);
+				System.out.println("pageIndex=" + pageIndex + ", statusIndex=" + i + ", status=" + status);
+				System.err.println(status);
 			}
+			System.out.println("total Num:" + statusWapper.getTotalNumber());
 		}
+	} catch (WeiboException e) {
+		e.printStackTrace();
+	}
 	}
 
 	/**
