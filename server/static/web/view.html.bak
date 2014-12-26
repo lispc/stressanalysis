@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>StressAnalysis</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" media="screen" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="/static/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" media="screen" href="/static/css/jquery-ui.css"> 
+        <link rel="stylesheet" media="screen" href="/static/css/view.css"> 
+        <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/bootstrap-popover.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/date.format.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/purl.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/view.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="top-div" class="navbar navbar-fixed-top">
+            <div id="logo-div">
+                <img id="logo" src="/static/img/logo.png">
+            </div>
+            <div id="title-div">
+                <p class="top-text">
+                Tsinghua University
+                </p>
+                <p class="top-text">
+                Human computer speech interaction research group
+                </p>
+            </div>
+            <div id="page-div">
+                <p id="homepage-btn" class="top-text top-button">
+                    Home
+                </p>
+                <p id="about-us-btn" class="top-text top-button">
+                    About
+                </p>
+                <p id="contact-us-btn" class="top-text top-button">
+                    Contact
+                </p>
+            </div>
+        </div>
+        <ul class="nav nav-tabs" style="width:70%; margin-left:auto; margin-right:auto; margin-top:100px;">
+            <li id="stress-btn" class="active"><a>心理压力成绩单</a></li>
+            <li id="stress-time-btn" class="pointer"><a>心理压力曲线</a></li>
+            <li id="reason-btn" class="pointer"><a>心里压力原因</a></li>
+            <li id="keyword-btn" class="pointer"><a>心里压力关键词</a></li>
+            <li id="map-btn" class="pointer"><a>区域心里压力</a></li>
+        </ul>
+        <div id="main" style="width:70%; margin-left:auto; margin-right:auto; margin-top:30px;">
+            <div id="stress-div" style="">
+                <div style="width:70%; float:left;">
+                    <div>
+                        <p style="text-align:center;font-size:28px;">心理压力成绩单</p>
+                    </div>
+                    <div style="margin-top:20px">
+                        <p style="font-size:22px; float:left;">心里压力值：</p>
+                        <p id="stress-value" style="font-size:22px">0</p>
+                    </div>
+                    <div style="margin-top:20px;">
+                        <p style="font-size:22px; float:left">建议：</p>
+                        <p style="font-size:22px;">多读书多看报多看电影多睡觉</p>
+                    </div>
+                    <img src="/static/img/tmp.png"></img>
+                </div>
+                <div style="float:right">
+                    <div style="margin-top:40px;"><button class="btn">专业心理测试</button></div>
+                    <div style="margin-top:20px;"><button class="btn">帮好友测测</button></div>
+                    <div style="margin-top:20px;"><button class="btn">分享给好友</button></div>
+                </div>
+            </div>
+            <div id="stress-time-div" style="display:none">
+                <div style="width:70%; float:left;">
+                    <div>
+                        <p style="text-align:center;font-size:28px;">心理压力曲线</p>
+                    </div>
+                    <div id="line-div"></div>
+                </div>
+                <div style="float:right">
+                    <div style="margin-top:40px;"><button class="btn">专业心理测试</button></div>
+                    <div style="margin-top:20px;"><button class="btn">帮好友测测</button></div>
+                    <div style="margin-top:20px;"><button class="btn">分享给好友</button></div>
+                </div>
+            </div>
+            <div id="reason-div" style="display:none">
+                <div style="width:70%; float:left;">
+                    <div>
+                        <p style="text-align:center;font-size:28px;">心理压力原因</p>
+                    </div>
+                    <div id="pie-div"></div>
+                </div>
+                <div style="float:right">
+                    <div style="margin-top:40px;"><button class="btn">专业心理测试</button></div>
+                    <div style="margin-top:20px;"><button class="btn">帮好友测测</button></div>
+                    <div style="margin-top:20px;"><button class="btn">分享给好友</button></div>
+                </div>
+            </div>
+            <div id="keyword-div" style="display:none">
+                <div style="width:70%; float:left;">
+                    <div>
+                        <p style="text-align:center;font-size:28px;">心理压力关键词</p>
+                    </div>
+                    <div id="keyword-list"></div>
+                    这里应该是张好看的包含这些关键词的图片，这个图片由我来生成，不过它的大小位置可以由你来定
+                </div>
+                <div style="float:right">
+                    <div style="margin-top:40px;"><button class="btn">专业心理测试</button></div>
+                    <div style="margin-top:20px;"><button class="btn">帮好友测测</button></div>
+                    <div style="margin-top:20px;"><button class="btn">分享给好友</button></div>
+                </div>
+                
+            </div>
+            <div id="map-div" style="display:none">
+                <p style="font-size:20px;">扩展功能，敬请期待</p>
+            </div>
+        </div>
+        <div id="bottom-div">
+            <div id="cut-line"></div>
+            <div id="about-div">
+                <p class="bottom-text">
+                Tsinghua University
+                </p>
+                <p class="bottom-text">
+                Human computer speech interaction research group
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

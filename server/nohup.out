@@ -1,0 +1,204 @@
+Validating models...
+
+0 errors found
+July 24, 2014 - 18:40:34
+Django version 1.6.5, using settings 'stress.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[24/Jul/2014 18:40:55] "GET / HTTP/1.1" 200 215
+[24/Jul/2014 18:40:55] "GET /static/web/homepage.html HTTP/1.1" 200 4397
+[24/Jul/2014 18:40:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 105939
+[24/Jul/2014 18:40:55] "GET /static/css/bootstrap-responsive.min.css HTTP/1.1" 200 16849
+[24/Jul/2014 18:40:55] "GET /static/css/homepage.css HTTP/1.1" 200 1304
+[24/Jul/2014 18:40:55] "GET /static/img/share-2.png HTTP/1.1" 200 6568
+[24/Jul/2014 18:40:55] "GET /static/js/jquery-1.9.1.min.js HTTP/1.1" 200 142806
+[24/Jul/2014 18:40:55] "GET /static/img/share-3.png HTTP/1.1" 200 6631
+[24/Jul/2014 18:40:55] "GET /static/css/jquery-ui.css HTTP/1.1" 200 32105
+[24/Jul/2014 18:40:55] "GET /static/img/logo.png HTTP/1.1" 200 10765
+[24/Jul/2014 18:40:55] "GET /static/img/step-3.png HTTP/1.1" 200 26691
+[24/Jul/2014 18:40:55] "GET /static/img/step-1.png HTTP/1.1" 200 30787
+[24/Jul/2014 18:40:55] "GET /static/img/step-2.png HTTP/1.1" 200 45567
+[24/Jul/2014 18:40:55] "GET /static/img/step-4.png HTTP/1.1" 200 31819
+Exception AttributeError: "'NoneType' object has no attribute 'free_and_destroy_model'" in <bound method model.__del__ of <liblinear.model object at 0x7f7fd0fe05f0>> ignored
+Validating models...
+
+0 errors found
+July 24, 2014 - 18:40:49
+Django version 1.6.5, using settings 'stress.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[24/Jul/2014 18:43:55] "GET /static/web/homepage.html HTTP/1.1" 200 4397
+[24/Jul/2014 18:43:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[24/Jul/2014 18:43:55] "GET /static/js/jquery-1.9.1.min.js HTTP/1.1" 304 0
+[24/Jul/2014 18:43:55] "GET /static/css/common.css HTTP/1.1" 200 1309
+[24/Jul/2014 18:43:55] "GET /static/js/date.format.js HTTP/1.1" 200 3885
+[24/Jul/2014 18:43:55] "GET /static/js/purl.js HTTP/1.1" 200 8771
+[24/Jul/2014 18:43:55] "GET /static/js/bootstrap-popover.js HTTP/1.1" 200 5356
+[24/Jul/2014 18:43:55] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 28538
+[24/Jul/2014 18:43:55] "GET /static/img/share-1.png HTTP/1.1" 200 7582
+[24/Jul/2014 18:43:55] "GET /static/js/homepage.js HTTP/1.1" 200 396
+[24/Jul/2014 18:43:55] "GET /static/js/common.js HTTP/1.1" 200 1154
+[24/Jul/2014 18:43:55] "GET /static/js/highcharts.js HTTP/1.1" 200 138290
+[24/Jul/2014 18:43:55] "GET /static/js/jquery-ui.js HTTP/1.1" 200 435844
+[24/Jul/2014 18:44:14] "GET /api/code?code=756d03a1fd445d48db69c5d31e548bbb HTTP/1.1" 200 211
+[24/Jul/2014 18:44:14] "GET /static/web/view.html HTTP/1.1" 200 10457
+[24/Jul/2014 18:44:15] "GET /static/css/view.css HTTP/1.1" 200 3184
+[24/Jul/2014 18:44:15] "GET /static/js/view.js HTTP/1.1" 200 5165
+[24/Jul/2014 18:44:15] "GET /static/img/line1.png HTTP/1.1" 200 8295
+[24/Jul/2014 18:44:15] "GET /static/img/line2.png HTTP/1.1" 200 8837
+[24/Jul/2014 18:44:15] "GET /static/img/s-2.png HTTP/1.1" 200 3373
+[24/Jul/2014 18:44:15] "GET /static/img/line4.png HTTP/1.1" 200 8801
+[24/Jul/2014 18:44:15] "GET /static/img/line3.png HTTP/1.1" 200 8795
+[24/Jul/2014 18:44:15] "GET /static/img/line5.png HTTP/1.1" 200 8251
+[24/Jul/2014 18:44:15] "GET /static/img/s-3.png HTTP/1.1" 200 4844
+[24/Jul/2014 18:44:15] "GET /static/img/s-1.png HTTP/1.1" 200 3467
+[24/Jul/2014 18:44:15] "GET /static/img/s-4.png HTTP/1.1" 200 4522
+[24/Jul/2014 18:44:15] "GET /static/img/title-1.png HTTP/1.1" 200 40827
+[24/Jul/2014 18:44:15] "GET /static/img/title-2.png HTTP/1.1" 200 45562
+[24/Jul/2014 18:44:15] "GET /static/img/title-4.png HTTP/1.1" 200 72600
+[24/Jul/2014 18:44:15] "GET /static/img/title-3.png HTTP/1.1" 200 76672
+[24/Jul/2014 18:44:15] "GET /static/img/s-5.png HTTP/1.1" 200 3988
+[24/Jul/2014 18:44:15] "GET /static/css/images/ui-icons_222222_256x240.png HTTP/1.1" 200 6922
+[24/Jul/2014 18:44:15] "GET /static/css/images/ui-bg_flat_75_ffffff_40x100.png HTTP/1.1" 404 1738
+[24/Jul/2014 18:44:15] "GET /static/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png HTTP/1.1" 404 1765
+[24/Jul/2014 18:44:15] "GET /static/css/images/ui-bg_flat_0_aaaaaa_40x100.png HTTP/1.1" 404 1735
+Building Trie..., from /usr/local/lib/python2.7/dist-packages/jieba/dict.txt
+DEBUG:jieba:Building Trie..., from /usr/local/lib/python2.7/dist-packages/jieba/dict.txt
+dumping model to file cache /tmp/jieba.cache
+DEBUG:jieba:dumping model to file cache /tmp/jieba.cache
+loading model cost 2.14689397812 seconds.
+DEBUG:jieba:loading model cost 2.14689397812 seconds.
+Trie has been built succesfully.
+DEBUG:jieba:Trie has been built succesfully.
+[24/Jul/2014 18:44:21] "GET /api/get_stress HTTP/1.1" 200 221
+[24/Jul/2014 18:44:25] "GET /api/get_keyword?limit=20 HTTP/1.1" 200 997
+[24/Jul/2014 19:09:14] "GET / HTTP/1.0" 200 215
+[24/Jul/2014 20:00:14] "GET http://proxyjudge.qualityproxylist.com/ HTTP/1.0" 404 1724
+[24/Jul/2014 20:00:48] "GET / HTTP/1.0" 200 215
+[24/Jul/2014 20:04:22] "GET http://www.anonymousproxylist.net/azenv2.php HTTP/1.0" 404 1734
+[24/Jul/2014 20:09:14] "GET http://www.proxyjudge.biz/az.php HTTP/1.0" 404 1690
+[24/Jul/2014 20:11:56] "GET / HTTP/1.0" 200 215
+[24/Jul/2014 20:58:25] "GET / HTTP/1.0" 200 215
+[24/Jul/2014 21:14:09] "GET / HTTP/1.0" 200 215
+[24/Jul/2014 22:35:10] "GET / HTTP/1.0" 200 215
+[24/Jul/2014 23:42:24] "GET //jmx-console/HtmlAdaptor HTTP/1.1" 404 2545
+[24/Jul/2014 23:42:26] "GET //manager/html/upload HTTP/1.1" 404 2533
+[24/Jul/2014 23:42:38] "GET //zecmd/zecmd.jsp?comment=whoami HTTP/1.1" 404 2536
+[24/Jul/2014 23:42:48] "GET //CluJaNuL/cmd.jsp?cmd=whoami HTTP/1.1" 404 2535
+[24/Jul/2014 23:42:50] "GET //wstats/wstats.jsp?comment=whoami HTTP/1.1" 404 2542
+[24/Jul/2014 23:42:56] "GET //idssvc/idssvc.jsp?comment=whoami HTTP/1.1" 404 2542
+[24/Jul/2014 23:43:02] "GET //iesvc/iesvc.jsp?comment=whoami HTTP/1.1" 404 2536
+[24/Jul/2014 23:43:03] "GET //bynazi/cmd.jsp?comment=whoami HTTP/1.1" 404 2533
+[24/Jul/2014 23:44:15] "GET / HTTP/1.0" 200 215
+[24/Jul/2014 23:49:34] "GET //jmx-console/HtmlAdaptor HTTP/1.1" 404 2545
+[24/Jul/2014 23:49:36] "GET //manager/html/upload HTTP/1.1" 404 2533
+[24/Jul/2014 23:49:37] "GET //zecmd/zecmd.jsp?comment=whoami HTTP/1.1" 404 2536
+[24/Jul/2014 23:49:38] "GET //CluJaNuL/cmd.jsp?cmd=whoami HTTP/1.1" 404 2535
+[24/Jul/2014 23:49:38] "GET //wstats/wstats.jsp?comment=whoami HTTP/1.1" 404 2542
+[24/Jul/2014 23:49:39] "GET //idssvc/idssvc.jsp?comment=whoami HTTP/1.1" 404 2542
+[24/Jul/2014 23:49:40] "GET //iesvc/iesvc.jsp?comment=whoami HTTP/1.1" 404 2536
+[24/Jul/2014 23:49:40] "GET //bynazi/cmd.jsp?comment=whoami HTTP/1.1" 404 2533
+[25/Jul/2014 00:43:11] "CONNECT mta6.am0.yahoodns.net:25 HTTP/1.0" 404 1666
+[25/Jul/2014 01:44:41] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 02:58:49] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 03:20:34] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 03:26:19] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 04:21:55] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 04:27:32] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 04:43:53] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 05:43:40] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 06:02:34] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 07:51:05] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 08:12:42] "GET / HTTP/1.0" 200 215
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[25/Jul/2014 08:24:52] "GET http://www.baidu.com/?rands=25376464 HTTP/1.1" 404 1667
+[25/Jul/2014 08:24:52] "GET http://118.123.4.111:800/proxyheader.php?rands=25376464 HTTP/1.1" 404 1728
+[25/Jul/2014 08:24:52] "GET http://www.soso.com/?rands=25376464 HTTP/1.1" 404 1663
+[25/Jul/2014 08:24:52] "GET http://reg.renren.com/?rands=25376464 HTTP/1.1" 404 1671
+[25/Jul/2014 08:24:52] "GET http://reg.163.com/?rands=25376464 HTTP/1.1" 404 1659
+[25/Jul/2014 08:24:52] "GET http://mail.126.com/?rands=25376464 HTTP/1.1" 404 1663
+[25/Jul/2014 08:24:53] "GET http://www.so.com/?rands=25376464 HTTP/1.1" 404 1655
+[25/Jul/2014 08:24:56] "GET http://udb.yy.com/register.do?rands=25376464 HTTP/1.1" 404 1688
+[25/Jul/2014 09:18:20] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 09:50:10] "GET / HTTP/1.0" 200 215
+[25/Jul/2014 10:11:40] "GET / HTTP/1.1" 200 215
+[25/Jul/2014 10:11:40] "GET / HTTP/1.1" 200 215
+[25/Jul/2014 10:11:40] "GET /static/web/homepage.html HTTP/1.1" 200 4397
+[25/Jul/2014 10:11:40] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 105939
+[25/Jul/2014 10:11:40] "GET /static/css/common.css HTTP/1.1" 200 1309
+[25/Jul/2014 10:11:40] "GET /static/css/homepage.css HTTP/1.1" 200 1304
+[25/Jul/2014 10:11:40] "GET /static/js/jquery-1.9.1.min.js HTTP/1.1" 200 142806
+[25/Jul/2014 10:11:40] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 28538
+[25/Jul/2014 10:11:40] "GET /static/js/date.format.js HTTP/1.1" 200 3885
+[25/Jul/2014 10:11:40] "GET /static/js/bootstrap-popover.js HTTP/1.1" 200 5356
+[25/Jul/2014 10:11:40] "GET /static/js/purl.js HTTP/1.1" 200 8771
+[25/Jul/2014 10:11:40] "GET /static/js/highcharts.js HTTP/1.1" 200 138290
+[25/Jul/2014 10:11:40] "GET /static/js/common.js HTTP/1.1" 200 1154
+[25/Jul/2014 10:11:40] "GET /static/js/homepage.js HTTP/1.1" 200 396
+[25/Jul/2014 10:11:40] "GET /static/js/jquery-ui.js HTTP/1.1" 200 435844
+[25/Jul/2014 10:11:40] "GET /static/img/share-3.png HTTP/1.1" 200 6631
+[25/Jul/2014 10:11:40] "GET /static/img/share-2.png HTTP/1.1" 200 6568
+[25/Jul/2014 10:11:40] "GET /static/img/share-1.png HTTP/1.1" 200 7582
+[25/Jul/2014 10:11:40] "GET /static/img/logo.png HTTP/1.1" 200 10765
+[25/Jul/2014 10:11:49] "GET /api/code?code=335ab1f14f6e37ace27d360a485d4e32 HTTP/1.1" 200 211
+[25/Jul/2014 10:11:49] "GET /static/web/view.html HTTP/1.1" 200 10457
+[25/Jul/2014 10:11:49] "GET /static/css/view.css HTTP/1.1" 200 3184
+[25/Jul/2014 10:11:49] "GET /static/js/view.js HTTP/1.1" 200 5165
+[25/Jul/2014 10:11:49] "GET /static/img/line1.png HTTP/1.1" 200 8295
+[25/Jul/2014 10:11:49] "GET /static/img/s-1.png HTTP/1.1" 200 3467
+[25/Jul/2014 10:11:49] "GET /static/img/title-1.png HTTP/1.1" 200 40827
+[25/Jul/2014 10:11:49] "GET /static/img/line3.png HTTP/1.1" 200 8795
+[25/Jul/2014 10:11:49] "GET /static/img/line2.png HTTP/1.1" 200 8837
+[25/Jul/2014 10:11:49] "GET /static/img/line5.png HTTP/1.1" 200 8251
+[25/Jul/2014 10:11:49] "GET /static/img/title-3.png HTTP/1.1" 200 76672
+[25/Jul/2014 10:11:49] "GET /static/img/line4.png HTTP/1.1" 200 8801
+[25/Jul/2014 10:11:49] "GET /static/img/title-4.png HTTP/1.1" 200 72600
+[25/Jul/2014 10:11:49] "GET /static/img/s-3.png HTTP/1.1" 200 4844
+[25/Jul/2014 10:11:49] "GET /static/img/s-2.png HTTP/1.1" 200 3373
+[25/Jul/2014 10:11:49] "GET /static/img/s-5.png HTTP/1.1" 200 3988
+[25/Jul/2014 10:11:49] "GET /static/img/s-4.png HTTP/1.1" 200 4522
+[25/Jul/2014 10:11:49] "GET /static/img/title-2.png HTTP/1.1" 200 45562
+[25/Jul/2014 10:11:49] "GET /static/css/images/ui-bg_flat_75_ffffff_40x100.png HTTP/1.1" 404 1738
+[25/Jul/2014 10:11:49] "GET /static/css/images/ui-bg_flat_0_aaaaaa_40x100.png HTTP/1.1" 404 1735
+[25/Jul/2014 10:11:49] "GET /static/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png HTTP/1.1" 404 1765
+[25/Jul/2014 10:11:49] "GET /static/css/images/ui-icons_222222_256x240.png HTTP/1.1" 200 6922
+[25/Jul/2014 10:12:01] "GET /api/get_stress HTTP/1.1" 200 221
+[25/Jul/2014 10:12:13] "GET /api/get_stress_by_time?from=1405649566657&until=1406254366657 HTTP/1.1" 200 501
+[25/Jul/2014 10:12:20] "GET /api/get_keyword?limit=20 HTTP/1.1" 200 997
+[25/Jul/2014 10:14:38] "GET / HTTP/1.1" 200 215
+[25/Jul/2014 10:14:38] "GET /static/web/homepage.html HTTP/1.1" 200 4397
+[25/Jul/2014 10:14:38] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 105939
+[25/Jul/2014 10:14:38] "GET /static/css/bootstrap-responsive.min.css HTTP/1.1" 200 16849
+[25/Jul/2014 10:14:38] "GET /static/css/homepage.css HTTP/1.1" 200 1304
+[25/Jul/2014 10:14:38] "GET /static/css/common.css HTTP/1.1" 200 1309
+[25/Jul/2014 10:14:38] "GET /static/css/jquery-ui.css HTTP/1.1" 200 32105
+[25/Jul/2014 10:14:38] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 28538
+[25/Jul/2014 10:14:38] "GET /static/js/jquery-1.9.1.min.js HTTP/1.1" 200 142806
+[25/Jul/2014 10:14:38] "GET /static/js/bootstrap-popover.js HTTP/1.1" 200 5356
+[25/Jul/2014 10:14:38] "GET /static/js/date.format.js HTTP/1.1" 200 3885
+[25/Jul/2014 10:14:38] "GET /static/js/purl.js HTTP/1.1" 200 8771
+[25/Jul/2014 10:14:38] "GET /static/js/common.js HTTP/1.1" 200 1154
+[25/Jul/2014 10:14:38] "GET /static/js/highcharts.js HTTP/1.1" 200 138290
+[25/Jul/2014 10:14:38] "GET /static/js/homepage.js HTTP/1.1" 200 396
+[25/Jul/2014 10:14:38] "GET /static/js/jquery-ui.js HTTP/1.1" 200 435844
+[25/Jul/2014 10:14:38] "GET /static/img/share-1.png HTTP/1.1" 200 7582
+[25/Jul/2014 10:14:38] "GET /static/img/logo.png HTTP/1.1" 200 10765
+[25/Jul/2014 10:14:38] "GET /static/img/step-3.png HTTP/1.1" 200 26691
+[25/Jul/2014 10:14:38] "GET /static/img/step-1.png HTTP/1.1" 200 30787
+[25/Jul/2014 10:14:38] "GET /static/img/step-4.png HTTP/1.1" 200 31819
+[25/Jul/2014 10:14:38] "GET /static/img/step-2.png HTTP/1.1" 200 45567
+[25/Jul/2014 10:14:38] "GET /static/img/share-2.png HTTP/1.1" 200 6568
+[25/Jul/2014 10:14:38] "GET /static/img/share-3.png HTTP/1.1" 200 6631

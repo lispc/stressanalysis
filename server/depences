@@ -1,0 +1,7 @@
+pip2 install weibo sinaweibopy
+django
+python2-arff
+python2-jieba
+pythonw-pymongo
+https://github.com/ninjin/liblinear
+mongo

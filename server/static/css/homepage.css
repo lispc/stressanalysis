@@ -1,0 +1,81 @@
+#main-div {
+    position: relative;
+    top: 70px;
+    height: 100px;
+    min-width: 1000px;
+}
+
+#main-div #intro-div {
+    position: absolute;
+    top: 50px;
+    left: 140px;
+    right: 140px;
+}
+
+.main-title {
+    font-size: 40px;
+    height: 50px;
+    line-height: 32px;
+    color: #4d4d4d;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+}
+
+.main-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #666666;
+    margin-bottom: 0px;
+    letter-spacing: 0.5px;
+}
+
+#main-div #intro-div #main-img {
+    position: relative;
+    top: 60px;
+    width: 94%;
+    left: 3%;
+    right: 3%;
+}
+
+.step-img {
+    width: 18%;
+    position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#main-div #intro-div #right-img {
+    position: absolute;
+    width: 170px;
+    top: 0px;
+    right: 0px;
+}
+
+.share-img {
+    width: 21%;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 0%;
+}
+
+#main-div #intro-div #button-div {
+    position: relative;
+    top: 140px;
+}
+
+#start {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align:center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: white;
+    border-width : 0px;
+    border-style : solid;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}

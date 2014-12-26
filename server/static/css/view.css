@@ -1,0 +1,205 @@
+.pointer {
+    cursor: pointer;
+}
+
+#main-div {
+    position: absolute;
+    top: 120px;
+    left: 140px;
+    right: 140px;
+    min-width: 1000px;
+}
+
+#main-div #left-div {
+    position: absolute;
+    width: 220px;
+}
+
+#main-div #left-div .line-img {
+    position: absolute;
+    left: 30px;
+    width: 170px; 
+}
+
+#main-div #left-div .s-div {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 23px;
+}
+
+#main-div #left-div .s-div-last {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 110px;
+    margin-bottom: 0px;
+}
+
+#main-div #left-div .s-div-2nd-last {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 110px;
+    margin-bottom: 0px;
+}
+
+#main-div #left-div .s-img {
+    position: absolute;
+    line-height: 60px;
+    width: 30px;
+    left: 0;
+}
+
+#main-div #left-div .s-text {
+    position: absolute;
+    left: 40px;
+    width: 180px;
+    margin: 0px;
+    margin-left: 10px;
+    font-size: 26px;
+    color: #4591FF;
+}
+
+#main-div #right-div {
+    position: absolute;
+    left: 250px;
+    right: 0px;
+}
+
+#main-div #right-div .main-img {
+    position: relative;
+    top: -10px;
+    margin-left: 32px;
+    width: 270px;
+}
+
+#main-div #right-div .main-title {
+    position: relative;
+    top: -20px;
+    font-size: 32px;
+}
+#main-div #right-div .main-text {
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+    width: 700px;
+    text-align: left;
+}
+
+#main-div #right-div .btn-div {
+    position: relative;
+    top: 110px;
+    width: 500px;
+}
+#main-div #right-div .btn-left {
+    float:left;
+}
+
+#main-div #right-div .btn-right {
+    float: right;
+}
+
+#main-div #right-div .info {
+    position: absolute;
+    width: 300px;
+    top: 0px;
+    left: 0px;
+    
+}
+
+#main-div #right-div .result {
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}
+
+#main-div #right-div .title-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40px;
+}
+
+#main-div #right-div .title-text {
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+#main-div #right-div .person-img-div {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    text-align: center;
+}
+
+#main-div #right-div .person-img {
+    width: 130px;
+    border-radius: 65px;
+    border-width : 0px;
+    border-style : solid;
+}
+
+#main-div #right-div .person-name {
+    position: absolute;
+    top: 310px;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+#main-div #right-div #report-div{
+    position: absolute;
+    top: 70px;
+    left: 20px;
+}
+
+#main-div #right-div #reason-div{
+    position: absolute;
+    top: 40px;
+    left: 220px;
+}
+
+
+#main-div #right-div #line-div{
+    position: absolute;
+    top: 70px;
+    left: 20px;
+}
+
+#main-div #right-div #keyword-div{
+    position: absolute;
+    left: 20px;
+    top: 70px;
+    width: 550px;
+    height: 340px;
+}
+
+#main-div #right-div .share-div {
+    position: absolute;
+    top: 440px;
+    width: 100%;
+}
+
+.btn-stress {
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align:center;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: white;
+    border-width : 0px;
+    border-style : solid;
+    border-radius: 9px;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bottom-div {
+    top: 700px;
+}

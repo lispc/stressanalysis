@@ -1,0 +1,115 @@
+var URL_STRESS = '/api/get_stress';
+var URL_STRESS_TIME = '/api/get_stress_by_time';
+var URL_REASON = '/api/get_reason';
+var URL_KEYWORD = '/api/get_keyword';
+var uid = 0;
+var items = ['stress', 'stress-time', 'reason', 'keyword', 'map'];
+
+function load_stress(uid) {
+    $.get(URL_STRESS, {uid: uid}, function(data){
+        if (data.success == 1) {
+            $('#stress-value').html(parseInt(data.stress*100));
+        }
+    }, 'json');
+}
+
+function load_keyword(uid) {
+    var limit = 20;
+    $.get(URL_KEYWORD, {uid: uid, limit: limit}, function(data){
+        if (data.success == 1) {
+            var s = $("#keyword-list");
+            s.html('');
+            for (var i=0; i<data.data.length; i++) 
+                s.append($("<p></p>").text(data.data[i].keyword));
+        }
+    }, 'json');
+}
+
+function load_stress_time(uid) {
+    var from = 0;
+    var until = 0;
+    $.get(URL_STRESS_TIME, {uid: uid, from: from, until: until}, function(data){
+        if (data.success == 1) {
+            var x = [];
+            var y = [];
+            for (var j=0; j<data.data.length; j++) {
+                x.push(data.data[j].time);
+                y.push(data.data[j].stress);
+            }
+            function formatAuto() {
+                return new Date(this.value*1000).format('mm-dd');
+            }
+            $('#line-div').highcharts({
+                title: {text: '心里压力曲线', x:0},
+                xAxis: {categories: x, labels: {formatter: formatAuto}},
+                yAxis: {title: '心里压力值',plotLines: [{value: 0, width: 1, color: '#808080'}]},
+                legend:{borderWidth:0, itemStyle:{fontSize:'10px'}},
+                series: [{data:y}]
+            });
+        }
+    }, 'json');
+}
+
+function load_reason(uid) {
+    var limit = 10;
+    $.get(URL_REASON, {uid: uid, limit: limit}, function(data){
+        if (data.success == 1) {
+            var res = [];
+            for (var j=0; j<data.data.length; j++) {
+                res.push({name: data.data[j].reason, y: data.data[j].weight});
+            }
+            function formatAuto() {
+                return new Date(this.value*1000).format('mm-dd');
+            }
+            $('#pie-div').highcharts({
+                title: {text: '心里压力原因', x:0},
+                series: [{type: 'pie',data: res}]
+            });
+        }
+    }, 'json');
+}
+
+
+function select_item(item) {
+    var btn_now = '#' + item + '-btn';
+    var div_now = '#' + item + '-div';
+    $(btn_now).addClass('active');
+    $(btn_now).removeClass('pointer');
+    $(div_now).show();
+}
+
+function deselect_item(item) {
+    var btn_now = '#' + item + '-btn';
+    var div_now = '#' + item + '-div';
+    $(btn_now).removeClass('active');
+    $(btn_now).addClass('pointer');
+    $(div_now).hide();
+}
+
+function bind_select() {
+    for (var i=0; i<items.length; i++) {
+        var btn = '#' + items[i] + '-btn';
+        $(btn)[0].o = items[i];
+        $(btn).bind('click', function(){
+            deselect_item($('.active')[0].o);
+            select_item(this.o);
+        })
+    }
+}
+
+function get_uid() {
+    return 1;
+}
+
+$(document).ready(function() {
+    bind_select();
+    uid = get_uid();
+    load_stress(uid);
+    load_keyword(uid);
+    load_stress_time(uid);
+    load_reason(uid);
+    bind_homepage();
+})
+
+
+

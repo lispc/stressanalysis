@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>StressAnalysis</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" media="screen" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="/static/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" media="screen" href="/static/css/jquery-ui.css"> 
+        <link rel="stylesheet" media="screen" href="/static/css/common.css"> 
+        <link rel="stylesheet" media="screen" href="/static/css/view.css"> 
+        <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/bootstrap-popover.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/date.format.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/purl.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/view.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="top-div" class="navbar navbar-fixed-top">
+            <div id="logo-div">
+                <img id="logo" src="/static/img/logo.png">
+            </div>
+            <div id="title-div">
+                <p class="top-text">
+                Tsinghua University
+                </p>
+                <p class="top-text">
+                Human computer speech interaction research group
+                </p>
+            </div>
+            <div id="page-div">
+                <p id="homepage-btn" class="top-text top-button">
+                    Home
+                </p>
+                <p id="about-us-btn" class="top-text top-button">
+                    About
+                </p>
+                <p id="contact-us-btn" class="top-text top-button">
+                    Contact
+                </p>
+            </div>
+        </div>
+        <div id="main-div">
+            <div id="left-div">
+                <img id="l-1" class="line-img" src="/static/img/line1.png">
+                <img id="l-2" class="line-img" src="/static/img/line2.png" style="display:none">
+                <img id="l-3" class="line-img" src="/static/img/line3.png" style="display:none">
+                <img id="l-4" class="line-img" src="/static/img/line4.png" style="display:none">
+                <img id="l-5" class="line-img" src="/static/img/line5.png" style="display:none">
+                <div id="s-1" class="s-div pointer">
+                    <img class="s-img" src="/static/img/s-1.png">
+                    <p class="s-text">Report</p>
+                </div>
+                <div id="s-2" class="s-div pointer">
+                    <img class="s-img" src="/static/img/s-2.png">
+                    <p class="s-text">Chart</p>
+                </div>
+                <div id="s-3" class="s-div pointer">
+                    <img class="s-img" src="/static/img/s-3.png">
+                    <p class="s-text">Keyword</p>
+                </div>
+                <div id="s-4" class="s-div-last pointer">
+                    <img class="s-img" src="/static/img/s-4.png">
+                    <p class="s-text">Map</p>
+                </div>
+                <div id="s-5" class="s-div-last pointer">
+                    <img class="s-img" src="/static/img/s-5.png">
+                    <p class="s-text">Test</p>
+                </div>
+            </div>
+            <div id="right-div">
+                <div id="step-1-1">
+                    <center><img class="main-img" src="/static/img/title-1.png"></img></center>
+                    <center><p class="main-title">Report</p></center>
+                    <center><p class="main-text">balabalabalabala</p></center>
+                    <center><div class="btn-div">
+                        <div id="youself-1" name="next" class="btn-stress btn-left unhover">
+                            Youself
+                        </div>
+                        <div id="friends-1" class="btn-stress btn-right unhover">
+                            Friends
+                        </div>
+                    </div></center>
+                </div>
+                <div id="step-1-2" style="display:none">
+                    <div class="info">
+                        <img class="title-img" src='/static/img/title-1.png'></img>
+                        <p class="title-text">Report</p>
+                        <div class="person-img-div">
+                            <img class="person-img"src=""></img>
+                        </div>
+                        <p class="person-name"></p>
+                    </div>
+                    <div class="result">
+                        <div id="report-div"></div>
+                        <div id="reason-div"></div>
+                    </div>
+                    <div class="share-div">
+                        <div id="share-2" class="btn-stress unhover">
+                            Share
+                        </div>
+                    </div>
+                </div>
+                <div id="step-2-1" style="display:none">
+                    <center><img class="main-img" src="/static/img/title-2.png"></img></center>
+                    <center><p class="main-title">Chart</p></center>
+                    <center><p class="main-text">balabalabalabala</p></center>
+                    <center><div class="btn-div">
+                        <div id="youself-2" name="next" class="btn-stress btn-left unhover">
+                            Youself
+                        </div>
+                        <div id="friends-2" class="btn-stress btn-right unhover">
+                            Friends
+                        </div>
+                    </div></center>
+                </div>
+                <div id="step-2-2" style="display:none">
+                    <div class="info">
+                        <img class="title-img" src='/static/img/title-2.png'></img>
+                        <p class="title-text">Chart</p>
+                        <div class="person-img-div">
+                            <img class="person-img"src=""></img>
+                        </div>
+                        <p class="person-name"></p>
+                    </div>
+                    <div class="result">
+                        <div id="line-div"></div>
+                    </div>
+                    <div class="share-div">
+                        <div id="share-2" class="btn-stress unhover">
+                            Share
+                        </div>
+                    </div>
+                </div>
+                <div id="step-3-1" style="display:none">
+                    <center><img class="main-img" src="/static/img/title-3.png"></img></center>
+                    <center><p class="main-title">Keyword</p></center>
+                    <center><p class="main-text">balabalabalabala</p></center>
+                    <center><div class="btn-div">
+                        <div id="youself-3" name="next" class="btn-stress btn-left unhover">
+                            Youself
+                        </div>
+                        <div id="friends-3" class="btn-stress btn-right unhover">
+                            Friends
+                        </div>
+                    </div></center>
+                </div>
+                <div id="step-3-2" style="display:none">
+                    <div class="info">
+                        <img class="title-img" src='/static/img/title-3.png'></img>
+                        <p class="title-text">Keyword</p>
+                        <div class="person-img-div">
+                            <img class="person-img"src=""></img>
+                        </div>
+                        <p class="person-name"></p>
+                    </div>
+                    <div class="result">
+                        <div id="keyword-div"></div>
+                    </div>
+                    <div class="share-div">
+                        <div id="share-2" class="btn-stress unhover">
+                            Share
+                        </div>
+                    </div>
+                </div>
+                <div id="step-4-1" style="display:none">
+                    <center><img class="main-img" src="/static/img/title-4.png"></img></center>
+                    <center><p class="main-title">Map</p></center>
+                    <center><p class="main-text">balabalabalabala</p></center>
+                    <center><div class="btn-div">
+                        <div id="start-4" name="next" class="btn-stress unhover">
+                            Start
+                        </div>
+                    </div></center>
+                </div>
+                <div id="step-4-2" style="display:none">
+                    敬请期待
+                </div>
+                <div id="step-5-1" style="display:none">
+                    <center><img class="main-img" src="/static/img/title-1.png"></img></center>
+                    <center><p class="main-title">Test</p></center>
+                    <center><p class="main-text">balabalabalabala</p></center>
+                    <center><div class="btn-div">
+                        <div id="start-5" name="next" class="btn-stress unhover">
+                            Start
+                        </div>
+                    </div></center>
+                </div>
+                <div id="step-5-2" style="display:none">
+                    敬请期待
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom-div">
+            <div id="cut-line"></div>
+            <div id="about-div">
+                <p class="bottom-text">
+                Tsinghua University
+                </p>
+                <p class="bottom-text">
+                Human computer speech interaction research group
+                </p>
+            </div>
+        </div>
+        <div id="waiting"></div>
+    </body>
+</html>
